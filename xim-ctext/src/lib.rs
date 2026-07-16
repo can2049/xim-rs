@@ -299,6 +299,7 @@ mod tests {
     fn gb2312_cn_mixed_ascii_digits() {
         // "2026年07月16日" as COMPOUND_TEXT with ESC ( B between GB2312 and ASCII.
         const UTF8: &str = "2026年07月16日";
+        #[rustfmt::skip]
         const COMP: &[u8] = &[
             b'2', b'0', b'2', b'6',
             0x1b, 0x24, 0x28, 0x41, 0x44, 0x6a, // 年
